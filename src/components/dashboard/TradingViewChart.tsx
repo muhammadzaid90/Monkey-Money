@@ -32,5 +32,5 @@ export default function TradingViewChart({
     container.current.appendChild(script);
   }, [symbol]);
 
-  return <div ref={container} className="h-[500px] w-full" />;
+  return <div ref={container} className="h-[500px] w-full min-w-0" />;
 }
