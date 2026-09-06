@@ -27,7 +27,7 @@ export default function Home() {
 
       <MarketMonitor />
 
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-start">
         <div className="lg:w-2/3">
           <Card className="overflow-hidden p-0">
             <TradingViewChart symbol="TVC:SPX" />

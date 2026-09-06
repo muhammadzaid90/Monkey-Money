@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { Geologica } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/Sidebar";
 import TopTicker from "@/components/layout/TopTicker";
 import TopBar from "@/components/layout/TopBar";
 import TrialBanner from "@/components/layout/TrialBanner";
+
+const geologica = Geologica({ subsets: ["latin"], variable: "--font-geologica" });
 
 export const metadata: Metadata = {
   title: "Monkey Money",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-background text-foreground antialiased">
+      <body className={`${geologica.variable} font-sans bg-background text-foreground antialiased`}>
         <div className="flex h-screen w-full overflow-hidden">
           <Sidebar />
           <div className="flex min-w-0 flex-1 flex-col overflow-y-auto overflow-x-hidden">
