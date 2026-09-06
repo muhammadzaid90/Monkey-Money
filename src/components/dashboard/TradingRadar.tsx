@@ -25,7 +25,7 @@ export default function TradingRadar() {
       transition={{ duration: 0.3 }}
       className="rounded-card border border-border bg-surface p-4"
     >
-            <SectionHeader icon={<Target size={14} />} title="Trading Radar" action="View All →" color="pink" />
+      <SectionHeader icon={<Target size={14} />} title="Trading Radar" action="View All →" color="pink" />
 
       <div className="mt-3 flex items-center gap-1 overflow-x-auto">
         {radarTabs.map((t) => (
@@ -45,7 +45,7 @@ export default function TradingRadar() {
       </div>
 
       <div className="mt-3 space-y-1">
-        {tradingRadar.map((item, i) => (
+        {tradingRadar.slice(0, 1).map((item, i) => (
           <motion.div
             key={item.symbol}
             initial={{ opacity: 0, x: -6 }}
